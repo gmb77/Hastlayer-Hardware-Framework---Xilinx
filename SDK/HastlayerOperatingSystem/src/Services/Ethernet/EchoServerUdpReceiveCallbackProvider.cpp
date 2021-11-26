@@ -1,5 +1,5 @@
 #include "EchoServerUdpReceiveCallbackProvider.h"
-
+#ifdef USE_ETHERNET
 
 namespace HastlayerOperatingSystem
 {
@@ -23,3 +23,4 @@ udp_recv_fn EchoServerUdpReceiveCallbackProvider::GetCallback()
 }
 
 } /* namespace HastlayerOperatingSystem */
+#endif

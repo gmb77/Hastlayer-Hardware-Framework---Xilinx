@@ -1,5 +1,5 @@
 #include "DefaultNetworkInterfaceAccessor.h"
-
+#ifdef USE_ETHERNET
 namespace HastlayerOperatingSystem
 {
 
@@ -17,3 +17,4 @@ void DefaultNetworkInterfaceAccessor::SetDefaultNetworkInterface(netif* networkI
 }
 
 } /* namespace HastlayerOperatingSystem */
+#endif

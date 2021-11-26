@@ -1,7 +1,7 @@
 #include "EthernetManager.h"
 #include "../RegisterManager.h"
 #include "../TimerCallbackManager.h"
-
+#ifdef USE_ETHERNET
 #if LWIP_DHCP==1
 extern volatile int DhcpTimeoutCounter;
 #endif
@@ -256,3 +256,4 @@ void EthernetManager::SetCallbackForNextFinishedSignal(FinishedSignalCallback ca
 
 
 } /* namespace HastlayerOperatingSystem */
+#endif

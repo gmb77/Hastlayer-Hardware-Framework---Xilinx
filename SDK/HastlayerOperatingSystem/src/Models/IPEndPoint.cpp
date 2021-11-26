@@ -1,6 +1,6 @@
-#include "IpEndpoint.h"
+#include "IPEndPoint.h"
 
-
+#ifdef USE_ETHERNET
 namespace HastlayerOperatingSystem
 {
 
@@ -17,3 +17,4 @@ IpEndpoint::IpEndpoint(ip_addr* address, int port)
 }
 
 } /* namespace HastlayerOperatingSystem */
+#endif

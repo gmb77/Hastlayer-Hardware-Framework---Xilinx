@@ -1,6 +1,6 @@
 #ifndef ETHERNETCOMMUNICATIONSERVER_H_
 #define ETHERNETCOMMUNICATIONSERVER_H_
-
+#ifdef USE_ETHERNET
 #include "EthernetManager.h"
 #include "AcceptTcpConnectionCallbackProviderBase.h"
 #include "EchoServerTcpAcceptCallbackProvider.h"
@@ -27,5 +27,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* ETHERNETCOMMUNICATIONSERVER_H_ */

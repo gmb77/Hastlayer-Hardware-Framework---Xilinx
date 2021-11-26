@@ -1,6 +1,6 @@
 #ifndef ECHOSERVERTCPACCEPTCALLBACKPROVIDER_H_
 #define ECHOSERVERTCPACCEPTCALLBACKPROVIDER_H_
-
+#ifdef USE_ETHERNET
 #include "AcceptTcpConnectionCallbackProviderBase.h"
 
 
@@ -18,5 +18,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* ECHOSERVERTCPACCEPTCALLBACKPROVIDER_H_ */

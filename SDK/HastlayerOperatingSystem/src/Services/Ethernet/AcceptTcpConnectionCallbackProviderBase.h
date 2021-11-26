@@ -1,6 +1,6 @@
 #ifndef ACCEPTTCPCONNECTIONCALLBACKPROVIDERBASE_H_
 #define ACCEPTTCPCONNECTIONCALLBACKPROVIDERBASE_H_
-
+#ifdef USE_ETHERNET
 #include "lwip/tcp.h"
 
 
@@ -18,5 +18,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* ACCEPTTCPCONNECTIONCALLBACKPROVIDERBASE_H_ */

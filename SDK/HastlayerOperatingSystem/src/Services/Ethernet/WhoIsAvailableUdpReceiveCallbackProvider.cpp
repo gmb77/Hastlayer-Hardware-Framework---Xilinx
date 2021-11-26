@@ -1,5 +1,5 @@
 #include "WhoIsAvailableUdpReceiveCallbackProvider.h"
-
+#ifdef USE_ETHERNET
 
 namespace HastlayerOperatingSystem
 {
@@ -52,3 +52,4 @@ udp_recv_fn WhoIsAvailableUdpReceiveCallbackProvider::GetCallback()
 }
 
 } /* namespace HastlayerOperatingSystem */
+#endif

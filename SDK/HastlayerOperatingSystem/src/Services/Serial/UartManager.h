@@ -2,9 +2,12 @@
 #define UARTMANAGER_H_
 
 #include "xparameters.h"
+#include "xuartps_hw.h"
+#ifdef MICROBLAZE
 #include <xio.h>
 #include "xuartlite_l.h"
 #include "xil_types.h"
+#endif
 #include "../../TypeDefinitions.h"
 
 

@@ -1,6 +1,6 @@
 #include "InputOutputMemoryTcpAcceptCallbackProvider.h"
 #include "EthernetManager.h"
-
+#ifdef USE_ETHERNET
 
 namespace HastlayerOperatingSystem
 {
@@ -378,3 +378,4 @@ bool InputOutputMemoryTcpAcceptCallbackProvider::IsCommunicationActive()
 }
 
 } /* namespace HastlayerOperatingSystem */
+#endif

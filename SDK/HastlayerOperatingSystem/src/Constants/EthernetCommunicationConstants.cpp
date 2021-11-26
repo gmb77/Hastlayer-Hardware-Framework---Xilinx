@@ -1,6 +1,6 @@
 #include "EthernetCommunicationConstants.h"
 
-
+#ifdef USE_ETHERNET
 namespace HastlayerOperatingSystem
 {
 	static const byte DefaultIpAddressData[] = {192, 168, 1, 10};
@@ -13,3 +13,4 @@ namespace HastlayerOperatingSystem
 	const byte* EthernetCommunicationConstants::Initialization::DefaultGateway = DefaultGatewayData;
 
 } /* namespace HastlayerOperatingSystem */
+#endif

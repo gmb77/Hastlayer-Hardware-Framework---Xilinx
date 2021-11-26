@@ -5,8 +5,13 @@ namespace HastlayerOperatingSystem
 
 void UartManager::WaitForUartInput()
 {
+#ifdef MICROBLAZE
 	while (XUartLite_IsReceiveEmpty(XPAR_AXI_UARTLITE_0_BASEADDR))
 		;
+#else
+	while(!XUartPs_IsReceiveData(XPAR_XUARTPS_0_BASEADDR))
+		;
+#endif
 }
 
 void UartManager::WaitForUartInput(byte byteToWaitFor)
@@ -22,13 +27,22 @@ void UartManager::WaitForUartInput(byte byteToWaitFor)
 
 void UartManager::WaitForTransmitterReady()
 {
+#ifdef MICROBLAZE
 	while (XUartLite_IsTransmitFull(XPAR_AXI_UARTLITE_0_BASEADDR))
 		;
+#else
+	while(!XUartPs_IsTransmitFull(XPAR_XUARTPS_0_BASEADDR))
+		;
+#endif
 }
 
 byte UartManager::ReceiveByte()
 {
+#ifdef MICROBLAZE
 	return XUartLite_RecvByte(XPAR_AXI_UARTLITE_0_BASEADDR);
+#else
+	return XUartPs_RecvByte(XPAR_XUARTPS_0_BASEADDR);
+#endif
 }
 
 int UartManager::ReceiveInt()
@@ -52,7 +66,11 @@ int UartManager::ReceiveInt()
 
 void UartManager::SendByte(byte byteToSend)
 {
+#ifdef MICROBLAZE
 	XUartLite_SendByte(XPAR_AXI_UARTLITE_0_BASEADDR, byteToSend);
+#else
+	XUartPs_SendByte(XPAR_XUARTPS_0_BASEADDR, byteToSend);
+#endif
 }
 
 void UartManager::SendInt(int intToSend)

@@ -13,15 +13,15 @@ using namespace HastlayerOperatingSystem;
 
 int main()
 {
+#ifdef MICROBLAZE
 #if COMMUNICATION_CHANNEL==ETHERNET
 	CommunicationChannel communicationChannel = Ethernet;
 #else
 	CommunicationChannel communicationChannel = Serial;
 #endif
-
 	// Initializing platform.
 	Platform::InitializePlatform(communicationChannel);
-
+#endif
 #if COMMUNICATION_CHANNEL==ETHERNET
 	// Starts Ethernet communication server. It blocks the thread by running an infinite loop.
 	EthernetCommunicationServer::StartEthernetCommunicationServer();
@@ -29,8 +29,8 @@ int main()
 	// Starts serial communication server. It blocks the thread by running an infinite loop.
 	SerialCommunicationServer::StartSerialCommunicationServer();
 #endif
-
+#ifdef MICROBLAZE
 	Platform::CleanupPlatform();
-
+#endif
 	return 0;
 }

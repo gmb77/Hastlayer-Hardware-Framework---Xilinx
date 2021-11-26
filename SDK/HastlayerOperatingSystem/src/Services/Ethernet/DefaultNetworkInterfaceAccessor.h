@@ -1,6 +1,6 @@
 #ifndef DEFAULTNETWORKINTERFACEACCESSOR_H_
 #define DEFAULTNETWORKINTERFACEACCESSOR_H_
-
+#ifdef USE_ETHERNET
 #include "netif/xadapter.h"
 
 
@@ -23,5 +23,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* DEFAULTNETWORKINTERFACEACCESSOR_H_ */

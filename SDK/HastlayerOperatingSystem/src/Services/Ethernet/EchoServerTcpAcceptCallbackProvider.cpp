@@ -1,6 +1,6 @@
 #include "EchoServerTcpAcceptCallbackProvider.h"
 
-
+#ifdef USE_ETHERNET
 namespace HastlayerOperatingSystem
 {
 
@@ -42,3 +42,4 @@ tcp_accept_fn EchoServerTcpAcceptCallbackProvider::GetCallback()
 }
 
 } /* namespace HastlayerOperatingSystem */
+#endif

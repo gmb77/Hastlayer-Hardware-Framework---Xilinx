@@ -1,6 +1,6 @@
 #ifndef WHOISAVAILABLEUDPRECEIVECALLBACKPROVIDER_H_
 #define WHOISAVAILABLEUDPRECEIVECALLBACKPROVIDER_H_
-
+#ifdef USE_ETHERNET
 #include "DefaultNetworkInterfaceAccessor.h"
 #include "ReceiveUdpPacketCallbackProviderBase.h"
 #include "../../Constants/CommandTypes.h"
@@ -24,5 +24,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* WHOISAVAILABLEUDPRECEIVECALLBACKPROVIDER_H_ */

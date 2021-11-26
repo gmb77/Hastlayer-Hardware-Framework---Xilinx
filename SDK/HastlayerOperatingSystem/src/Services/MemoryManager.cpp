@@ -22,6 +22,7 @@ void MemoryManager::CopyIntegerToInputOutputArea(int value, unsigned int* offset
 {
 	*((int*)MemoryManager::GetInputOutputMemoryBaseAddress() + *offset) = value;
 	(*offset)++;
+	Xil_DCacheFlushRange((INTPTR)((int*)MemoryManager::GetInputOutputMemoryBaseAddress() + *offset),sizeof(value));
 }
 
 void* MemoryManager::GetInputOutputMemoryBaseAddress()

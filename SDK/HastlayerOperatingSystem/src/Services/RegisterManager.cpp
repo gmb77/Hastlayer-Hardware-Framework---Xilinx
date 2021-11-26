@@ -1,10 +1,15 @@
 #include "RegisterManager.h"
 
+#ifdef MICROBLAZE
+#define HAST_IP_BASEADDR XPAR_HAST_IP_0_S00_AXI_BASEADDR;
+#else
+#define HAST_IP_BASEADDR XPAR_HAST_IP_V1_0_0_BASEADDR;
+#endif
+
 namespace HastlayerOperatingSystem
 {
 
-volatile unsigned long *registerBaseAddressPointer = (volatile unsigned long *) XPAR_HAST_IP_0_S00_AXI_BASEADDR;
-
+volatile unsigned long *registerBaseAddressPointer = (volatile unsigned long *)HAST_IP_BASEADDR;
 
 void RegisterManager::RunAndWait()
 {

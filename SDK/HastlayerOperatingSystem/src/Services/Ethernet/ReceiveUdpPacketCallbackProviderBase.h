@@ -1,6 +1,6 @@
 #ifndef RECEIVEUDPPACKETCALLBACKPROVIDERBASE_H_
 #define RECEIVEUDPPACKETCALLBACKPROVIDERBASE_H_
-
+#ifdef USE_ETHERNET
 #include "lwip/udp.h"
 
 
@@ -18,5 +18,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* RECEIVEUDPPACKETCALLBACKPROVIDERBASE_H_ */

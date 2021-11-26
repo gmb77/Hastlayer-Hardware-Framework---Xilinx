@@ -1,6 +1,6 @@
 #ifndef ECHOSERVERUDPRECEIVECALLBACKPROVIDER_H_
 #define ECHOSERVERUDPRECEIVECALLBACKPROVIDER_H_
-
+#ifdef USE_ETHERNET
 #include "ReceiveUdpPacketCallbackProviderBase.h"
 
 
@@ -18,5 +18,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* ECHOSERVERUDPRECEIVECALLBACKPROVIDER_H_ */

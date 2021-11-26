@@ -1,6 +1,6 @@
 #ifndef ETHERNETMANAGER_H_
 #define ETHERNETMANAGER_H_
-
+#ifdef USE_ETHERNET
 #include "netif/xadapter.h"
 #include "../../Platform.h"
 #include "lwip/init.h"
@@ -69,5 +69,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* ETHERNETMANAGER_H_ */

@@ -32,7 +32,7 @@
 
 #include "Platform.h"
 #include "Services/TimerCallbackManager.h"
-
+#ifdef MICROBLAZE
 
 static XIntc intc;
 
@@ -182,4 +182,4 @@ void Platform::CleanupPlatform()
 {
     DisableCaches();
 }
-
+#endif

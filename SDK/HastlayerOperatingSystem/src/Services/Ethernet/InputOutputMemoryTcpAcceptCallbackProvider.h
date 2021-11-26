@@ -1,6 +1,6 @@
 #ifndef INPUTOUTPUTMEMORYTCPACCEPTCALLBACKPROVIDER_H_
 #define INPUTOUTPUTMEMORYTCPACCEPTCALLBACKPROVIDER_H_
-
+#ifdef USE_ETHERNET
 #include "../../Constants/EthernetCommunicationConstants.h"
 #include "../../Constants/CommandTypes.h"
 #include "AcceptTcpConnectionCallbackProviderBase.h"
@@ -53,5 +53,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* INPUTOUTPUTMEMORYTCPACCEPTCALLBACKPROVIDER_H_ */

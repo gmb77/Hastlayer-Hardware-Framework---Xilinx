@@ -50,6 +50,7 @@ enum CommunicationChannel { Ethernet, Serial };
 
 #include "xil_cache.h"
 #include "xparameters.h"
+#ifdef MICROBLAZE
 #include "xil_cache.h"
 #include "arch/cc.h"
 #include "xintc.h"
@@ -63,12 +64,14 @@ enum CommunicationChannel { Ethernet, Serial };
 	#include "xuartns550_l.h"
 #endif
 
+#ifdef USE_ETHERNET
 #include "lwip/tcp.h"
 #if LWIP_DHCP==1
 	#include "lwip/dhcp.h"
 
 	void dhcp_fine_tmr();
 	void dhcp_coarse_tmr();
+#endif
 #endif
 
 
@@ -85,4 +88,5 @@ public:
 	static void EnableInterrupts();
 };
 
+#endif //__PLATFORM_H_
 #endif

@@ -1,6 +1,6 @@
 #include "EthernetCommunicationServer.h"
 #include "../TimerCallbackManager.h"
-
+#ifdef USE_ETHERNET
 namespace HastlayerOperatingSystem
 {
 
@@ -121,3 +121,4 @@ void EthernetCommunicationServer::StartEthernetCommunicationServer()
 }
 
 } /* namespace HastlayerOperatingSystem */
+#endif

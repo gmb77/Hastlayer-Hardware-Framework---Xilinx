@@ -1,6 +1,6 @@
 #ifndef ETHERNETCOMMUNICATIONCONSTANTS_H_
 #define ETHERNETCOMMUNICATIONCONSTANTS_H_
-
+#ifdef USE_ETHERNET
 #include "../TypeDefinitions.h"
 #include "netif/xadapter.h"
 
@@ -74,5 +74,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* ETHERNETCOMMUNICATIONCONSTANTS_H_ */

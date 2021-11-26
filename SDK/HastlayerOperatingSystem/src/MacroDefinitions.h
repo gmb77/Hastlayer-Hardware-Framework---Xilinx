@@ -2,7 +2,8 @@
 // COMMUNICATION_CHANNEL should be defined in the project's symbol settings with a value of one below.
 #define SERIAL 0 // Default communication channel. Also used when the channel is not defined.
 #define ETHERNET 1
-
+//#define USE_ETHERNET
+//#define MICROBLAZE
 
 // Helper for creating if block.
 #define IF(statement, operation) if (statement) { operation }

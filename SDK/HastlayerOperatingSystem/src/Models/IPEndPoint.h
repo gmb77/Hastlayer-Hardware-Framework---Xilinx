@@ -1,6 +1,6 @@
 #ifndef IPENDPOINT_H_
 #define IPENDPOINT_H_
-
+#ifdef USE_ETHERNET
 #include "../TypeDefinitions.h"
 #include "netif/xadapter.h"
 
@@ -19,5 +19,5 @@ public:
 };
 
 } /* namespace HastlayerOperatingSystem */
-
+#endif
 #endif /* IPENDPOINT_H_ */
