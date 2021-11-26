@@ -1,0 +1,7 @@
+/*Hastlayer_Platform*/
+the_ROM_image:
+{
+  [bootloader]<Hastlayer_Platform/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}
