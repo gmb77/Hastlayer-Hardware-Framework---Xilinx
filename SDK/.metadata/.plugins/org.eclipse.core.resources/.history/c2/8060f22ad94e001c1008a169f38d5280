@@ -1,0 +1,19 @@
+#include "DefaultNetworkInterfaceAccessor.h"
+
+namespace HastlayerOperatingSystem
+{
+#ifdef ETHERNET
+static netif* _defaultNetworkInterface;
+
+
+netif* DefaultNetworkInterfaceAccessor::GetDefaultNetworkInterface()
+{
+	return _defaultNetworkInterface;
+}
+
+void DefaultNetworkInterfaceAccessor::SetDefaultNetworkInterface(netif* networkInterface)
+{
+	_defaultNetworkInterface = networkInterface;
+}
+#endif
+} /* namespace HastlayerOperatingSystem */
