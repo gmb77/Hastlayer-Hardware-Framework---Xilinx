@@ -17,8 +17,8 @@ entity Hast_IP_v1_0 is
 		C_S00_AXI_ADDR_WIDTH : integer := 6;
 		
 		-- Parameters of Axi Master Bus Interface M00_AXI
-		C_M00_AXI_TARGET_SLAVE_BASE_ADDR : std_logic_vector := x"48FFFFF0";
-		C_M00_AXI_BURST_LEN    : integer := 16;
+		C_M00_AXI_TARGET_SLAVE_BASE_ADDR : std_logic_vector := x"10000000";
+		C_M00_AXI_BURST_LEN    : integer := 1;
 		C_M00_AXI_ID_WIDTH     : integer := 1;
 		C_M00_AXI_ADDR_WIDTH   : integer := 32;
 		C_M00_AXI_DATA_WIDTH   : integer := 32;

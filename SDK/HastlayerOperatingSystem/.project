@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>HastlayerOperatingSystem</name>
-	<comment></comment>
+	<comment>Created by Vitis v2020.2</comment>
 	<projects>
-		<project>Hastlayer_bsp</project>
+		<project>Hastlayer_Platform</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -19,6 +19,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>com.xilinx.sdx.sdk.core.SdkProjectNature</nature>
 		<nature>org.eclipse.cdt.core.cnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
